@@ -49,15 +49,15 @@ const Menu = ({ open, setOpen, user }) => {
       obtenerDatos();
     };
   }, [user]);
-
+  console.log(data);
   return (
     <StyledMenu open={open}>
       <Title>PERFIL</Title>
       <ContainerRoute>
-        {user.photoURL ? (
-          <ImgProfile alt="foto" src={user.photoURL} />
-        ) : (
+        {!user.photoURL ? (
           <ImgProfile alt="foto" src={Avatar} />
+        ) : (
+          <ImgProfile alt="foto" src={user.photoURL} />
         )}
 
         <RouteInfo>{data.Name}</RouteInfo>
