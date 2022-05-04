@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Icon } from "./style";
+import Notification from "../../firebaseNotification/Notification";
 
 import Menu from "../../components/menu/index";
 
@@ -22,7 +23,9 @@ const Navbar = ({ setSecurity, user }) => {
       <div>
         <Icon className="fas fa-bell" />
       </div>
-
+      <div>
+        <Notification />
+      </div>
       <Menu
         open={open}
         setOpen={setOpen}

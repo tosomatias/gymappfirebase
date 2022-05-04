@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { signOut } from "firebase/auth";
-import { auth, db } from "../../firebaseConfig";
+import { auth, db } from "../../firebaseNotification/Firebase";
 import { doc, getDoc } from "firebase/firestore";
 import Avatar from "./avatar.png";
 
@@ -54,11 +54,7 @@ const Menu = ({ open, setOpen, user }) => {
     <StyledMenu open={open}>
       <Title>PERFIL</Title>
       <ContainerRoute>
-        {!user.photoURL ? (
-          <ImgProfile alt="foto" src={Avatar} />
-        ) : (
-          <ImgProfile alt="foto" src={user.photoURL} />
-        )}
+        <ImgProfile alt="foto" src={Avatar} />
 
         <RouteInfo>{data.Name}</RouteInfo>
         <RouteInfo>Edad: {data.edad}</RouteInfo>

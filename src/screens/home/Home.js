@@ -2,51 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TrainingDay from "../../components/trainingDay/index";
 import { Container, Button, ContainerButton } from "./style";
-import { messaging } from "../../firebaseConfig";
-import { getToken, onMessage } from "firebase/messaging";
 
 const Home = ({ user }) => {
-  // useEffect(() => {
-  //   Notification.requestPermission()
-  //     .then(function () {
-  //       console.log("Got notification permission");
-  //       return messaging.getToken();
-  //     })
-  //     .then(function (token) {
-  //       // print the token on the HTML page
-  //       console.log("then");
-  //     })
-  //     .catch(function (err) {
-  //       console.log("Didn't get notification permission", err);
-  //     });
-  //   // getToken(messaging, {
-  //   //   vapidKey:
-  //   //     "BFt0ZsfLvdWvmob3d8-f4zvGQWCYNe-fsH-RejxdP4E1jxWMgYjntUoPlGknawboXV1l5nCbHm7wIQCu5_epOxs",
-  //   // })
-  //   //   .then((currentToken) => {
-  //   //     if (currentToken) {
-  //   //       console.log(currentToken);
-  //   //       messaging.messaging.getToken().then((token) => {
-  //   //         console.log(token);
-  //   //       });
-  //   //     } else {
-  //   //       // Show permission request UI
-  //   //       console.log(
-  //   //         "No registration token available. Request permission to generate one."
-  //   //       );
-  //   //       // ...
-  //   //     }
-  //   //   })
-  //   //   .catch((err) => {
-  //   //     console.log("An error occurred while retrieving token. ", err);
-  //   //     // ...
-  //   //   });
-  //   onMessage(messaging, (payload) => {
-  //     console.log("Message received. ", payload);
-  //     // ...
-  //   });
-  // });
-
   const navigate = useNavigate();
   const [training, setTraining] = useState(false);
   const [isReadyForInstall, setIsReadyForInstall] = useState(false);

@@ -4,7 +4,7 @@ import Login from "./screens/login/Login";
 import Home from "./screens/home/Home";
 
 import Formulario from "./screens/form/index";
-import { auth } from "./firebaseConfig";
+import { auth } from "./firebaseNotification/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 import Files from "./screens/Files/Files";

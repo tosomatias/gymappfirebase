@@ -11,7 +11,7 @@ import {
   Icon,
 } from "./style";
 import Error from "../../components/Error";
-import { auth, db } from "../../firebaseConfig";
+import { auth, db } from "../../firebaseNotification/Firebase";
 import { doc, setDoc } from "firebase/firestore";
 import {
   createUserWithEmailAndPassword,

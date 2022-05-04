@@ -8,7 +8,7 @@ import {
   IconClose,
 } from "./style";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebaseConfig";
+import { db } from "../../firebaseNotification/Firebase";
 import Spinner from "../spinner/Spinner";
 
 const TrainingDay = ({ user, training }) => {
